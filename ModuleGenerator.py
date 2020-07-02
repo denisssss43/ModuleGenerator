@@ -49,7 +49,9 @@ with codecs.open('cfg.json', 'r', 'utf-8') as read_file:
 Guid = CreateModuleInDB(Title)
 
 # Создание директории модуля
-try: os.mkdir('./{0}'.format(Name))
+try: 
+	os.mkdir('./Modules')
+	os.mkdir('./Modules/{0}'.format(Name))
 except: pass
 
 # Загрузка шаблона вьюмодели

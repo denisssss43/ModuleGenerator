@@ -156,7 +156,7 @@ namespace ProductApp.ViewModel
 
 		public @Name_ViewModel() => _ = InitializeAsync();
 
-		#region Open Command
+		#region Open
 		/// <summary>
 		/// Метод загрузки модуля
 		/// </summary>
@@ -192,11 +192,6 @@ namespace ProductApp.ViewModel
 			}
 			catch (Exception) { }
 		}
-
-		static public bool CanOpen() => IsReadable;
-
-		static public ICommand OpenCommand => new RelayCommand(Open, CanOpen);
-
 
 		#endregion
 
@@ -326,7 +321,7 @@ namespace ProductApp.ViewModel
 
 			#endregion
 				.ConfigureAwait(false);
-			private void Can_Exemple_Execut() => true ;
+			private bool Can_Exemple_Execut() => true ;
 			public ICommand Exemple_Command => new RelayCommand(Exemple_ExecutAsync, Can_Exemple_Execut);
 
 			#endregion
@@ -337,11 +332,11 @@ namespace ProductApp.ViewModel
 		
 			#region Exemple
 
-			private async void Exemple_Execut() 
+			private void Exemple_Execut() 
 			{
 
 			}
-			private void Can_Exemple_Execut() => true ;
+			private bool Can_Exemple_Execut() => true ;
 			public ICommand Exemple_Command => new RelayCommand(Exemple_Execut, Can_Exemple_Execut);
 
 			#endregion

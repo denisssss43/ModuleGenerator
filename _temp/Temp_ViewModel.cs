@@ -70,7 +70,7 @@ namespace ProductApp.ViewModel
 		/// <summary>
 		/// Подключение к GZ.dbo 
 		/// </summary>
-		private GZEntities _db = new GZEntities(DbConnectionString.GZEntity.ConnectionString);
+		private Entities _db = new Entities(DbConnectionString.GZEntity.ConnectionString);
 
 		private readonly Dispatcher _dispatcher = Dispatcher.CurrentDispatcher;
 		private readonly TaskScheduler _taskScheduler = TaskScheduler.FromCurrentSynchronizationContext();

@@ -1,6 +1,6 @@
 import json
 import codecs
-import os
+import os, sys
 import pyodbc
 import re 
 
@@ -50,8 +50,8 @@ Guid = CreateModuleInDB(Title)
 
 # Создание директории модуля
 try: 
-	os.mkdir('./Modules')
-	os.mkdir('./Modules/{0}'.format(Name))
+	# os.mkdir('./Modules1/')
+	os.mkdir('./Modules/{0}/'.format(Name) )
 except: pass
 
 # Загрузка шаблона вьюмодели
